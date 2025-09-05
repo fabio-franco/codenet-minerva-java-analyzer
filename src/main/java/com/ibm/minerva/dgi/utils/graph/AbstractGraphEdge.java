@@ -18,6 +18,7 @@
 
 package com.ibm.minerva.dgi.utils.graph;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.Map;
 
@@ -31,7 +32,8 @@ import com.ibm.wala.ssa.SSAInstruction;
 
 
 public abstract class AbstractGraphEdge implements Serializable {
-	private static final long serialVersionUID = 73380029269931811L;
+    @Serial
+    private static final long serialVersionUID = 73380029269931811L;
 	public Integer weight = 1;
     public final String context;
     protected AbstractGraphEdge() {

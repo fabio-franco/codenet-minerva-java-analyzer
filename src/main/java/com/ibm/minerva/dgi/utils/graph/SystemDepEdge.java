@@ -51,7 +51,7 @@ public class SystemDepEdge extends AbstractGraphEdge {
 
     @Override
     public boolean equals(Object o) {
-        return (o instanceof SystemDepEdge) && (this.toString().equals(o.toString())) && Integer.valueOf(this.hashCode()).equals(o.hashCode()) && this.type.equals(((SystemDepEdge) o).getType());
+        return (o instanceof SystemDepEdge sde) && (this.toString().equals(o.toString())) && Integer.valueOf(this.hashCode()).equals(o.hashCode()) && this.type.equals(sde.getType());
     }
     public String getType() { return type; }
     public Integer getSourcePos() {

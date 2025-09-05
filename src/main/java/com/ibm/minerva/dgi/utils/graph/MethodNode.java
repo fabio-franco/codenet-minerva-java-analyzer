@@ -18,6 +18,7 @@
 
 package com.ibm.minerva.dgi.utils.graph;
 
+import java.io.Serial;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -31,7 +32,8 @@ import com.ibm.wala.classLoader.IMethod;
 
 public class MethodNode extends AbstractGraphNode {
 
-	private static final long serialVersionUID = 1966838287941900414L;
+    @Serial
+    private static final long serialVersionUID = 1966838287941900414L;
 	public final String id;
     public final String method;
     public final String returnType;

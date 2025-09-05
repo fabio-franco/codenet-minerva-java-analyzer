@@ -18,6 +18,7 @@
 
 package com.ibm.minerva.dgi.utils.graph;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.Map;
 import org.jgrapht.nio.Attribute;
@@ -25,7 +26,8 @@ import org.jgrapht.nio.Attribute;
 
 public abstract class AbstractGraphNode implements Serializable {
 
-	private static final long serialVersionUID = -4458565959512522181L;
+    @Serial
+    private static final long serialVersionUID = -4458565959512522181L;
 
 	public abstract String getId();
 

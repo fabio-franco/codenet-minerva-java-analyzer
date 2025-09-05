@@ -269,8 +269,8 @@ public final class CallGraphBuilder {
 						SDGGraph2JSON.convertAndSave(sdg, callGraph, ipcfg_full, sdgGraphFile);
 						
 					} catch (Throwable t) {
-						if (t instanceof IOException) {
-			                throw (IOException) t;
+						if (t instanceof IOException exception) {
+			                throw exception;
 			            }
 			            logger.severe(() -> formatMessage("CallGraphWriteError", sdgGraphFile, t.getMessage()));
 			            throw new IOException(t);
@@ -283,8 +283,8 @@ public final class CallGraphBuilder {
             }
         }
         catch (Throwable t) {
-            if (t instanceof IOException) {
-                throw (IOException) t;
+            if (t instanceof IOException exception) {
+                throw exception;
             }
             logger.severe(() -> formatMessage("CallGraphWriteError", callGraphFile, t.getMessage()));
             throw new IOException(t);
@@ -469,8 +469,8 @@ public final class CallGraphBuilder {
             scope.addToScope(ClassLoaderReference.Application, module);
         }
         catch (Throwable t) {
-            if (t instanceof IOException) {
-                throw (IOException) t;
+            if (t instanceof IOException exception) {
+                throw exception;
             }
             logger.severe(() -> formatMessage("CallGraphBuildError", t.getMessage()));
             throw new IOException(t);

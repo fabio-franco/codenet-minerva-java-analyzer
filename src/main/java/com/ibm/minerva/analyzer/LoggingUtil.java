@@ -71,7 +71,7 @@ public final class LoggingUtil {
                     sb.append("] ");
                 }
                 sb.append(record.getMessage());
-                return String.format("%s%n", sb.toString());
+                return "%s%n".formatted(sb.toString());
             }
         });
         logger.addHandler(handler);
