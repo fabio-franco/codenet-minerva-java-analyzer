@@ -1,0 +1,35 @@
+flowchart TD
+    classDef java8 fill:#ffd6e8,stroke:#d02670,stroke-width:2px
+    classDef java21 fill:#d9fbfb,stroke:#007d79,stroke-width:2px
+    classDef process fill:#d0e2ff,stroke:#0f62fe,stroke-width:2px,text-align:left
+    classDef file stroke-width:2px
+
+    start["Java 8 to Java 21 Modernization"] --> task0["Task 0: Maven Configuration"]
+    start --> task1["Task 1: Java Compatibility Analysis"]
+
+    task0 --> fixMaven["<b>Fix Maven Duplicate Artifact Warning</b>
+    • Description: Modified maven-assembly-plugin configuration
+    • Cost: $0.06
+    • Total Tokens Used: 59,242
+    • Execution Time: 60.42s"]:::process
+
+    task1 --> analyzeJava["<b>Java Upgrade Compatibility Analysis</b>
+    • Description: Analyzed project for Java 21 compatibility
+    • Cost: $0.04
+    • Total Tokens Used: 40,974
+    • Execution Time: 47.37s"]:::process
+
+    fixMaven --> mavenResult["Clean Maven Build
+    without Duplicate Artifact Warning"]:::java21
+    
+    analyzeJava --> compatResult["Java 21 Compatible Code
+    No changes required"]:::java21
+
+    mavenResult --> final["Java 21 Ready Application"]
+    compatResult --> final
+
+    subgraph legend[Legend]
+        java8Example["Java 8 Code"]:::java8
+        processExample["Modernization Step"]:::process
+        java21Example["Java 21 Code"]:::java21
+    end
