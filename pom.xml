@@ -91,18 +91,20 @@
         <artifactId>maven-assembly-plugin</artifactId>
         <executions>
           <execution>
+            <id>make-assembly</id>
             <phase>package</phase>
             <goals>
               <goal>single</goal>
             </goals>
+            <configuration>
+              <descriptorRefs>
+                <descriptorRef>jar-with-dependencies</descriptorRef>
+              </descriptorRefs>
+              <appendAssemblyId>true</appendAssemblyId>
+              <attach>true</attach>
+            </configuration>
           </execution>
         </executions>
-        <configuration>
-          <descriptorRefs>
-            <descriptorRef>jar-with-dependencies</descriptorRef>
-          </descriptorRefs>
-          <appendAssemblyId>true</appendAssemblyId>
-        </configuration>
       </plugin>
       <!-- Maven Surefire Plugin 2.22.0 (or newer) is required for JUnit 5 support -->
       <plugin>
